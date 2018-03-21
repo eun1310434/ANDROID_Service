@@ -109,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onNewIntent(Intent intent) {
-        Log.d("onNewIntent", "onNewIntent");
         // Intent를 통해 오는 모든 것을 처리
         // onNewIntent가 만들어진 상태에서는 onCreate 호출 안됨
         // 어떤 액티비티에서 자기 자신을 호출때 중복되어 호출하는 경우를 방지하기 위해 사용되기도 함
@@ -117,28 +116,25 @@ public class MainActivity extends AppCompatActivity {
         if (intent != null) {
             String tag = intent.getStringExtra("tag");
             String data = intent.getStringExtra("data");
+            Log.d("onNewIntent", "data : " + data);
 
             if(tag.equals("A")){
                 if(data.equals("Quit")){
                     button_a.setClickable(true);
-                }else{
-                    button_a.setText("A-Quit");
                 }
                 tv_a_log.append(data +"\n");
             }
+
             if(tag.equals("B")){
                 if(data.equals("Quit")){
                     button_b.setClickable(true);
-                }else{
-                    button_b.setText("B-Quit");
                 }
                 tv_b_log.append(data +"\n");
             }
+
             if(tag.equals("C")){
                 if(data.equals("Quit")){
                     button_c.setClickable(true);
-                }else{
-                    button_c.setText("C-Quit");
                 }
                 tv_c_log.append(data +"\n");
             }
@@ -157,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
 
         //어플을 종료시 모든 Thread를 종료
-        //SenToService(intent, "ALL", "quit");
+        SenToService(intent, "ALL", "quit");
         super.onDestroy();
     }
 }
