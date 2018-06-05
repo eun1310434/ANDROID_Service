@@ -6,6 +6,7 @@
   ○ Reference
      - Do it android app Programming
 
+
 □ FUNCTION
    ○ Process
       01) MainActivity : startService() -> SendToActivity : onStartCommand()
@@ -16,6 +17,7 @@
           - Message to Thread
       04) SendToActivity : startActivity() -> MainActivity : onNewIntent()
           - Message to UIActivity
+
    ○ Unit
       - public class MainActivity extends AppCompatActivity {
         01) protected void onCreate(Bundle savedInstanceState)
