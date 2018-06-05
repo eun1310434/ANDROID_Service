@@ -13,7 +13,7 @@
           - Message to Service
       02) SendToActivity : onStartCommand() -> ServiceThread : run()
           - Message to Thread
-      03) ServiceThread : listener.SetContent() -> SendToActivity : listener.SetContent()
+      03) SendToActivity : OnThreadListener : SetContent() -> SendToActivity : OnThreadListener : SetContent()
           - Message to Thread
       04) SendToActivity : startActivity() -> MainActivity : onNewIntent()
           - Message to UIActivity
