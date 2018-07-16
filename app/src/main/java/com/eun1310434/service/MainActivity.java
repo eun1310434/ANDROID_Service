@@ -91,15 +91,15 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Intent intent;
+    private Intent intent;
 
-    TextView tv_a_log;
-    TextView tv_b_log;
-    TextView tv_c_log;
+    private TextView tv_a_log;
+    private TextView tv_b_log;
+    private TextView tv_c_log;
 
-    Button button_a;
-    Button button_b;
-    Button button_c;
+    private Button button_a;
+    private Button button_b;
+    private Button button_c;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
